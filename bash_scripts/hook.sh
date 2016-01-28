@@ -4,16 +4,16 @@ wget -O projectmaster.zip -q https://github.com/bdensmore/dita-docs/archive/mast
 
 if [ -f projectmaster.zip ]; then
     rm -rf dita-docs-master
-    # rm -rf public/
+
     # Unzip the zip file
     unzip -q projectmaster.zip
 
     # Delete zip file
     rm projectmaster.zip
 
+    rm -rf public/*.*
 
-    # chmod 777 -R ../executable-files/dita-ot-2.2.1/
-
+    # call DITA Open Toolkit and create HTML Help with TOC
     executable-files/dita-ot-2.2.1/bin/dita -i dita-docs-master/flowers.ditamap -f tocjs -o public
 
     rm -rf dita-docs-master/
