@@ -12,8 +12,8 @@ if [ -f projectmaster.zip ]; then
     rm projectmaster.zip
 
 
-    chmod 777 -R ../executable-files/dita-ot-2.2.1/
-
+    # chmod 777 -R ../executable-files/dita-ot-2.2.1/
+    mkdir ../public
     ../executable-files/dita-ot-2.2.1/bin/dita -i dita-docs-master/flowers.ditamap -f tocjs -o public
 
     rm -rf dita-docs-master/
