@@ -19,7 +19,5 @@ if [ -f projectmaster.zip ]; then
     rm -rf dita-docs-master/
 
     mv public/flowers.html public/index.html
-    # Perhaps call any other scripts you need to rebuild assets here
-    # or set owner/permissions
-    # or confirm that the old site was replaced correctly
+
 fi
